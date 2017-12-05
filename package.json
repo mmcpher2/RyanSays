@@ -1,0 +1,28 @@
+{
+  "name": "ryansays",
+  "version": "1.0.0",
+  "description": "This app is under construction.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "firebase": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcpher2/RyanSays.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmcpher2/RyanSays/issues"
+  },
+  "homepage": "https://github.com/mmcpher2/RyanSays#readme"
+}
