@@ -1,0 +1,18 @@
+<ul ng-controller="NavCtrl">
+
+    <li><p>UT Coaching Search Game</p></li>
+    <li>
+        <span ng-if="isAuthenticated()">
+            <a href="#">LeaderBoard</a>
+        </span>
+        <span ng-if="!isAuthenticated()"></span>
+    </li>
+
+    <li class="align-right">
+        <span ng-if="isAuthenticated()">
+            <a href="#" ng-click="logout()">Logout</a>
+        </span>
+        <span ng-if="!isAuthenticated()"></span>
+    </li>
+
+</ul>

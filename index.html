@@ -9,7 +9,7 @@
 
 <body ng-app="RyanSays">
 
-    <!-- <nav ng-include="''"></nav> -->
+    <nav ng-include="'/app/navigation/partials/navigation.html'"></nav>
 
     <div ng-view></div>
 
@@ -19,6 +19,10 @@
 
     <script src="./app/app.js"></script>
     <script src="./app/app.config.js"></script>
+
+    <script src="./app/navigation/controllers/NavCtrl.js"></script>
+
+    <script src="./app/game/controllers/GameCtrl.js"></script>
 
     <script src="./app/users/factories/UserFactory.js"></script>
 
