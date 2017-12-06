@@ -1,5 +1,5 @@
 angular.module("RyanSays")
-.controller("AuthCtrl", function($scope, $location, AuthFactory) {
+.controller("AuthCtrl", function($scope, $location, AuthFactory, UserFactory) {
     $scope.auth = {}
 
     $scope.logoutUser = function(){
@@ -11,13 +11,25 @@ angular.module("RyanSays")
         AuthFactory.authenticate(credentials).then(function (didLogin) {
             $scope.login = {}
             $scope.register = {}
-            $location.url("/employees/list")
+            $location.url("/users/game")
         })
     }
 
     $scope.registerUser = function(registerNewUser) {
       AuthFactory.registerWithEmail(registerNewUser).then(function (didRegister) {
-        logMeIn(registerNewUser)
+        $scope.logMeIn(registerNewUser)
+
+        // didRegister is the FB object which has the unique FB user id in it, which I will need to add to the user DB
+        userObj =   {
+            "userId": didRegister.uid,
+            "firstName": registerNewUser.firstName,
+            "lastName": registerNewUser.lastName,
+            "highScore": 0
+        }
+
+        // Adding new user object to FB through UserFactory add "POST" function
+        UserFactory.add(userObj)
+
       })
     }
 })

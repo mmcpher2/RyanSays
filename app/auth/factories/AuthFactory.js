@@ -6,9 +6,9 @@ angular.module("RyanSays")
         if (user) {
             currentUserData = user
 
-            if ($location.url() !== "/employees/list") {
+            if ($location.url() !== "/users/game") {
                 $timeout(function () {
-                    $location.url("/employees/list")
+                    $location.url("/users/game")
                 }, 100)
             } else {
                 $route.reload()

@@ -1,0 +1,11 @@
+<div>
+
+    <button ng-click="logOut()">Log Out</button>
+
+    <input type="text" placeholder="First Name" ng-model="auth.firstName"  autofocus>
+    <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus>
+    <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
+    <input type="password" placeholder="Password" ng-model="auth.password" autofocus>
+    <button ng-click="registerUser(auth)">Register</button>
+    <button ng-click="logMeIn(auth)">Login</button>
+</div>

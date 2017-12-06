@@ -9,9 +9,21 @@
 
 <body ng-app="RyanSays">
 
-    <nav ng-include="''"></nav>
+    <!-- <nav ng-include="''"></nav> -->
 
     <div ng-view></div>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/firebase/firebase.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <script src="./app/app.js"></script>
+    <script src="./app/app.config.js"></script>
+
+    <script src="./app/users/factories/UserFactory.js"></script>
+
+    <script src="./app/auth/factories/AuthFactory.js"></script>
+    <script src="./app/auth/controllers/AuthCtrl.js"></script>
 
 </body>
 </html>
