@@ -10,4 +10,6 @@ function ($scope, $location, AuthFactory) {
     */
     $scope.logout = () => AuthFactory.logout();
     }
+
+    
 )

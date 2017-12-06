@@ -3,7 +3,14 @@
     <li><p>UT Coaching Search Game</p></li>
     <li>
         <span ng-if="isAuthenticated()">
-            <a href="#">LeaderBoard</a>
+            <a href='#!/leaderboard'>LeaderBoard</a>
+        </span>
+        <span ng-if="!isAuthenticated()"></span>
+    </li>
+
+    <li>
+        <span ng-if="isAuthenticated()">
+            <a href='#!/game'>Back to Coaching Search</a>
         </span>
         <span ng-if="!isAuthenticated()"></span>
     </li>
