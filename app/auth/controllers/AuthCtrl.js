@@ -4,14 +4,15 @@ angular.module("RyanSays")
 
     $scope.logoutUser = function(){
         AuthFactory.logout()
-        $location.url('/auth')
+        $location.url("/auth")
     }
 
     $scope.logMeIn = function (credentials) {
         AuthFactory.authenticate(credentials).then(function (didLogin) {
             $scope.login = {}
             $scope.register = {}
-            $location.url("/users/game")
+            // Send user to game page (Log them in...)
+            $location.url("/game")
         })
     }
 
@@ -26,7 +27,6 @@ angular.module("RyanSays")
             "lastName": registerNewUser.lastName,
             "highScore": 0
         }
-
         // Adding new user object to FB through UserFactory add "POST" function
         UserFactory.add(userObj)
 
