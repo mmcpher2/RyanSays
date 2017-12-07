@@ -9,7 +9,4 @@ function ($scope, $location, AuthFactory) {
     Unauthenticate the client.
     */
     $scope.logout = () => AuthFactory.logout();
-    }
-
-    
-)
+    })
