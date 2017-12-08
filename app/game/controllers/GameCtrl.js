@@ -65,6 +65,10 @@ angular.module("RyanSays")
             if ((loopCounter + 1) === numbersArray.length && parsedUserResponse === numbersArray[loopCounter]) {
                 console.log("success!")
                 loopCounter = 0
+                //
+                if ($scope.highScore < $scope.roundCounter) {
+                    $scope.highScore = $scope.roundCounter
+                }
                 startRound()
             }
                 // Continue looping through the numbersArray

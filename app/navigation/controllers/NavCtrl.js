@@ -1,12 +1,11 @@
 angular.module("RyanSays").controller("NavCtrl",
 function ($scope, $location, AuthFactory) {
-    /*
-    Just a pass-through method to the AuthFactory method of the
-    same name.
-    */
+    // Refer to the ng-hide nav logic
+    $scope.currentPath = $location.path()
+
+    // Just a pass-through method to the AuthFactory method of the same name.
     $scope.isAuthenticated = () => AuthFactory.isAuthenticated();
-    /*
-    Unauthenticate the client.
-    */
+
+    // Unauthenticate the client.
     $scope.logout = () => AuthFactory.logout();
     })
