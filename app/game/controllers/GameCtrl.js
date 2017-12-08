@@ -1,9 +1,10 @@
 angular.module("RyanSays")
 .controller("GameCtrl", function($scope, UserFactory, AuthFactory) {
 
+    // Get the current user object from Firebase - Need this for the FB UID
     $scope.user = AuthFactory.getUser()
-    console.log($scope.user)
 
+    // Get the single current user that has the same uid and userID and get that user FB KEY
     UserFactory.single($scope.user.uid).then((user)=>{
         console.log(user)
         for (var key in user) {
@@ -58,59 +59,26 @@ angular.module("RyanSays")
 
         $scope.buttonClick = function (buttonNumber) {
             parsedUserResponse = parseInt(buttonNumber)
+                // Once you have hit the end of the array & you have gotten the last response correct, start a new round.
             if ((loopCounter + 1) === numbersArray.length && parsedUserResponse === numbersArray[loopCounter]) {
                 console.log("success!")
                 loopCounter = 0
                 startRound()
             }
+                // Continue looping through the numbersArray
             else if (parsedUserResponse === numbersArray[loopCounter]) {
                 console.log("success!!!")
                 loopCounter += 1
                 console.log(numbersArray[loopCounter])
             }
             else {
-                // Compare current $scope.roundCounter
+                // Upon failing, compare current round against users highScore and put the current score in if it is larger than highScore.
                 UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey)
-
                 console.log("failed!!")
                 alert("YOU'RE FIRED, GO FIND ANOTHER JOB!")
                 loopCounter = 0
                 numbersArray = []
             }
-
-        // // Responsible for looping through the numbersArray and processing whether the user responds with the same array or not.
-        // let gameLoop = function () {
-        //     // numbersArray.forEach(function(number) {
-        //         // Counting number of times the the for loop to be used in the first if statement
-        //         loopCounter += 1
-        //         // Show current round in console
-        //         console.log("ROUND: " + $scope.roundCounter)
-        //         // Show current number in numberArray to respond to
-        //         console.log("Remember this number: " + number)
-        //         // Get users response from prompt - This will be replaced by ng-click handlers soon ****
-        //         parsedUserResponse = ""
-        //         $scope.buttonClick = function (buttonNumber) {
-        //             parsedUserResponse = parseInt(buttonNumber)
-        //             // **(This will happen at the end of the forEach loop)
-        //             // - If the number of times through the loop = the length of the array, and the users response is the same as the number in the number array, call startRound() function to move to the user to the next round and increment round counter up 1.
-        //             if (loopCounter === numbersArray.length && parsedUserResponse === number) {
-        //                 console.log("success!")
-        //                 loopCounter = 0
-        //                 startRound()
-        //             } // **(This will happen when the user is in the middle of the loop)
-        //             // - If the users response is the same as the number in the numberArray, they will continue through the foreach loop.
-        //             else if (parsedUserResponse === number) {
-        //                 console.log("success!!!")
-        //             }// **(This will happen when the user messes up)
-        //             // - If the users response is anything else besides the correct answers, reset the round counter and numbersArray.
-        //             else {
-        //                 console.log("failed!!")
-        //                 $scope.roundCounter = 0
-        //                 numbersArray = []
-        //                 // startRound()
-        //             }
-        //         }
-        //     })
         }
         startRound()
     }
