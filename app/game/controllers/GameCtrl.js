@@ -2,6 +2,7 @@ angular.module("RyanSays")
 .controller("GameCtrl", function($scope) {
 
     $scope.startGame = function () {
+
         // Starting roundcounter at 0, but will start at 1 once it increments in startRound()
         $scope.roundCounter = 0
         // Starting with empty numbersArray, but will push random number in startRound()
@@ -9,6 +10,10 @@ angular.module("RyanSays")
         // Counts number of times through each gameLoop() loop
         loopCounter = 0
 
+        // let buttonGlow = function () {
+        //     numbersArray.classlist.add("addBackground")
+        // }
+        let num = 10
         // Responsible for handing each new round, and starting gameLoop()
         let startRound = function () {
             // Adding 1 to show with round you are on
@@ -18,6 +23,28 @@ angular.module("RyanSays")
             numbersArray.push((Math.floor(Math.random() * 6) + 1))
             console.log(numbersArray[loopCounter])
             console.log(numbersArray)
+
+            for (let i = 0; i < numbersArray.length; i++) {
+                console.log(i)
+                let selectedElement = numbersArray[i]
+                console.log("selectedElement", selectedElement)
+                let element = document.getElementById(`${selectedElement}`)
+                doSetTimeout(selectedElement, num)
+                num += 1
+            }
+        }
+        // Setting the delay for adding the addBackground class to the buttons in the nubersArray
+        function doSetTimeout(selectedElement, num1) {
+            setTimeout(() => {
+                document.getElementById(`${selectedElement}`).className = "addBackground"
+                doAnotherSetTimeout(selectedElement, num1)
+            }, 200 * num1)
+        }
+        // Setting the delay for removing the addBackground class to the buttons
+        function doAnotherSetTimeout(selectedElement, num2) {
+            setTimeout(() => {
+                document.getElementById(`${selectedElement}`).className = ""
+            }, 50 * num2)
         }
 
         $scope.buttonClick = function (buttonNumber) {
