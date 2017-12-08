@@ -1,5 +1,17 @@
 angular.module("RyanSays")
-.controller("GameCtrl", function($scope) {
+.controller("GameCtrl", function($scope, UserFactory, AuthFactory) {
+
+    $scope.user = AuthFactory.getUser()
+    console.log($scope.user)
+
+    UserFactory.single($scope.user.uid).then((user)=>{
+        console.log(user)
+        for (var key in user) {
+            console.log(user[key])
+            $scope.userKey = key
+            $scope.userObj = user[key]
+        }
+    })
 
     $scope.startGame = function () {
 
@@ -10,9 +22,7 @@ angular.module("RyanSays")
         // Counts number of times through each gameLoop() loop
         loopCounter = 0
 
-        // let buttonGlow = function () {
-        //     numbersArray.classlist.add("addBackground")
-        // }
+        // Multiply timeout delays by 10
         let num = 10
         // Responsible for handing each new round, and starting gameLoop()
         let startRound = function () {
@@ -28,7 +38,6 @@ angular.module("RyanSays")
                 console.log(i)
                 let selectedElement = numbersArray[i]
                 console.log("selectedElement", selectedElement)
-                let element = document.getElementById(`${selectedElement}`)
                 doSetTimeout(selectedElement, num)
                 num += 1
             }
@@ -38,13 +47,13 @@ angular.module("RyanSays")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).className = "addBackground"
                 doAnotherSetTimeout(selectedElement, num1)
-            }, 200 * num1)
-        }
-        // Setting the delay for removing the addBackground class to the buttons
-        function doAnotherSetTimeout(selectedElement, num2) {
-            setTimeout(() => {
-                document.getElementById(`${selectedElement}`).className = ""
-            }, 50 * num2)
+            }, 250 * num1)
+            // Setting the delay for removing the addBackground class to the buttons
+            function doAnotherSetTimeout(selectedElement, num2) {
+                setTimeout(() => {
+                    document.getElementById(`${selectedElement}`).className = ""
+                }, 15 * num2)
+            }
         }
 
         $scope.buttonClick = function (buttonNumber) {
@@ -60,7 +69,11 @@ angular.module("RyanSays")
                 console.log(numbersArray[loopCounter])
             }
             else {
+                // Compare current $scope.roundCounter
+                UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey)
+
                 console.log("failed!!")
+                alert("YOU'RE FIRED, GO FIND ANOTHER JOB!")
                 loopCounter = 0
                 numbersArray = []
             }
