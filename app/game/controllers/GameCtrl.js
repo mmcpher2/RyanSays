@@ -11,13 +11,15 @@ angular.module("RyanSays")
             console.log(user[key])
             $scope.userKey = key
             $scope.userObj = user[key]
+            // Using this to pupulate the highscore in the DOM
+            $scope.highScore = $scope.userObj.highScore
         }
     })
 
-    $scope.startGame = function () {
+    // Starting roundcounter at 0, but will start at 1 once it increments in startRound()
+    $scope.roundCounter = 0
 
-        // Starting roundcounter at 0, but will start at 1 once it increments in startRound()
-        $scope.roundCounter = 0
+    $scope.startGame = function () {
         // Starting with empty numbersArray, but will push random number in startRound()
         let numbersArray = []
         // Counts number of times through each gameLoop() loop
