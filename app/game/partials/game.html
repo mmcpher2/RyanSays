@@ -22,7 +22,11 @@
                     <button id="6" ng-click="buttonClick(6)">6</button>
                 </div>
             </div>
-            <button ng-click="startGame()">Start Search</button>
+
+            <span ng-if="!gameStarted()">
+                <button ng-click="startGame()">Start Search</button>
+            </span>
+            <span ng-if="gameStarted()"></span>
         </div>
     </div>
 </div>

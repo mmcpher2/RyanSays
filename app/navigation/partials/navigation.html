@@ -1,5 +1,9 @@
+
+
 <div ng-controller="NavCtrl">
+
     <p>UT Coaching Search Game</p>
+
     <div ng-hide="currentPath === '/leaderboard'">
         <span ng-if="isAuthenticated()">
             <a href='#!/leaderboard'>LeaderBoard</a>
@@ -7,9 +11,17 @@
         <span ng-if="!isAuthenticated() "></span>
     </div>
 
+
     <div ng-hide="currentPath === '/game'">
         <span ng-if="isAuthenticated()">
             <a href='#!/game'>Back to Coaching Search</a>
+        </span>
+        <span ng-if="!isAuthenticated()"></span>
+    </div>
+
+    <div>
+        <span ng-if="isAuthenticated()">
+                <p>Welcome {{ userObj.firstName }} {{ userObj.lastName }}</p>
         </span>
         <span ng-if="!isAuthenticated()"></span>
     </div>

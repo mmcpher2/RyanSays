@@ -15,17 +15,22 @@ angular.module("RyanSays")
             $scope.highScore = $scope.userObj.highScore
         }
     })
-
     // Starting roundcounter at 0, but will start at 1 once it increments in startRound()
     $scope.roundCounter = 0
 
     $scope.startGame = function () {
+
+        // Hide start button on game.html
+        $scope.gameStarted = function () {
+            return true
+        }
+        $scope.gameStarted()
+
         // Starting with empty numbersArray, but will push random number in startRound()
         let numbersArray = []
         // Counts number of times through each gameLoop() loop
         loopCounter = 0
-
-        // Multiply timeout delays by 10
+        // For lighting up buttons - Multiply timeout delays by 10
         let num = 10
         // Responsible for handing each new round, and starting gameLoop()
         let startRound = function () {
@@ -59,6 +64,7 @@ angular.module("RyanSays")
             }
         }
 
+        // Checking user button click against current array numbers
         $scope.buttonClick = function (buttonNumber) {
             parsedUserResponse = parseInt(buttonNumber)
                 // Once you have hit the end of the array & you have gotten the last response correct, start a new round.
@@ -82,6 +88,14 @@ angular.module("RyanSays")
                 UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey)
                 console.log("failed!!")
                 alert("YOU'RE FIRED, GO FIND ANOTHER JOB!")
+
+                // Show start button now
+                $scope.gameStarted = function () {
+                    return false
+                }
+                $scope.gameStarted()
+
+                // Reset counters
                 loopCounter = 0
                 numbersArray = []
             }
