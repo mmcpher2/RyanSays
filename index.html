@@ -15,6 +15,24 @@
 
     <div ng-view></div>
 
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '117133885669900',
+          xfbml      : true,
+          version    : 'v2.11'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/firebase/firebase.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
@@ -29,6 +47,5 @@
 
     <script src="./app/users/factories/UserFactory.js"></script>
     <script src="./app/auth/factories/AuthFactory.js"></script>
-
 </body>
 </html>

@@ -1,6 +1,19 @@
 angular.module("RyanSays")
 .controller("GameCtrl", function($scope, UserFactory, AuthFactory) {
 
+    // Share the users high score on their facbook page when they click the share button
+    document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+        display: 'popup',
+        method: 'share',
+        mobile_iframe: true,
+        quote: `I just lasted ${$scope.highScore} weeks as the Athletic Director at the University of Tennessee!
+
+        Play the Tennessee Athletic Director simulator and see how long you can last by clicking the link below... It's incredible.`,
+        href: 'https://mmcpher2.github.io/RyanSays/',
+        }, function(response){});
+    }
+
     // Get the current user object from Firebase - Need this for the FB UID
     $scope.user = AuthFactory.getUser()
 
