@@ -16,6 +16,15 @@
                 </li>
 
                 <li>
+                    <div ng-hide="currentPath === '/chatboard'">
+                        <span ng-if="isAuthenticated()">
+                            <a href='#!/chatboard'>Chatboard</a>
+                        </span>
+                        <span ng-if="!isAuthenticated() "></span>
+                    </div>
+                </li>
+
+                <li>
                     <div ng-hide="currentPath === '/game'">
                         <span ng-if="isAuthenticated()">
                             <a href='#!/game'>Back to Coaching Search</a>
