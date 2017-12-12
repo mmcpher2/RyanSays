@@ -1,18 +1,24 @@
 
-<nav ng-include="'/app/navigation/partials/navigation.html'"></nav>
+<nav class="nav-wrapper amber darken-3" ng-include="'/app/navigation/partials/navigation.html'"></nav>
 
 <div>
+    <div class="gameInfo">
+            <p>Welcome to the University of Tennesse coaching search!</p>
 
-    <section>
-        <p>Welcome to the UT coaching search game!</p>
-        <p>Enter your name, email, and password to register or login.</p>
-    </section>
+            <p>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searching of all time!</p>
+
+            <p>But be careful! If you don't follow along with who the fans are picking as the coach, you will be fired immediately!!!</p>
+
+            <p>Enter your name, email, and password to register or login.</p>
+
+            <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p>
+    </div>
 
     <div>
         <input type="text" placeholder="First Name" ng-model="auth.firstName"  autofocus>
-        <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus>
+        <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus><br>
         <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
-        <input type="password" placeholder="Password" ng-model="auth.password" autofocus>
+        <input type="password" placeholder="Password" ng-model="auth.password" autofocus><br>
         <button ng-click="registerUser(auth)">Register</button>
         <button ng-click="logMeIn(auth)">Login</button>
     </div>

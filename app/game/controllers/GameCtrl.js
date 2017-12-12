@@ -59,7 +59,7 @@ angular.module("RyanSays")
             // Setting the delay for removing the addBackground class to the buttons
             function doAnotherSetTimeout(selectedElement, num2) {
                 setTimeout(() => {
-                    document.getElementById(`${selectedElement}`).className = ""
+                    document.getElementById(`${selectedElement}`).classList.remove("addBackground")
                 }, 15 * num2)
             }
         }

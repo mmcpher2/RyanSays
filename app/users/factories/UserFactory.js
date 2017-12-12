@@ -8,14 +8,14 @@ angular
             value: null,
             writable: true
         },
-        // "find": {
-        //     value: function (searchString) {
-        //         const result = this.cache.find(s => {
-        //             return s.firstName.includes(searchString) ||
-        //                    s.lastName.includes(searchString)
-        //         })
-        //         return result}
-        // },
+        "find": {
+            value: function (searchString) {
+                const result = this.cache.find(s => {
+                    return s.firstName.includes(searchString) ||
+                           s.lastName.includes(searchString)
+                })
+                return result}
+        },
         "list": {
             value: function () {
                 return $http({
@@ -63,13 +63,13 @@ angular
                 }
             }
         },
-    //     "delete": {
-    //         value: function (key) {
-    //             return $http({
-    //                 method: "DELETE",
-    //                 url: `https://ryansays-293c9.firebaseio.com/users/${key}/.json`,
-    //             })
-    //         }
-    //     }
+        "delete": {
+            value: function (userKey) {
+                return $http({
+                    method: "DELETE",
+                    url: `https://ryansays-293c9.firebaseio.com/users/${userKey}/.json`,
+                })
+            }
+        }
     })
 })

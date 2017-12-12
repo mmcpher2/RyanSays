@@ -1,28 +1,62 @@
+/* Auth.html */
+.gameInfo {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    width: 500px;
+    height: 250px;
+    margin-bottom: 10px;
+}
 
+/* Adding coloring to current coach in search */
 .addBackground {
-    background-color: rgba(0, 0, 255, 0.84);
-}
-/*
-#1 {
-    background: url('../coaches/Gruden.jpg');
+    background-color: hsla(27, 100%, 50%, 0.84);
 }
 
-#2 {
-    background: url();
+/* Button Images and filter */
+.gruden {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Gruden.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
 }
-
-#3 {
-    background: url();
+.gundy {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Gundy.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
 }
-
-#4 {
-    background: url();
+.leach {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Leach.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
 }
-
-#5 {
-    background: url();
+.martin {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Martin.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
 }
-
-#6 {
-    background: url();
-} */
+.miles {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Miles.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+.schiano {
+    width: 150px;
+    height: 150px;
+    background-image: url('../coaches/Schiano.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}

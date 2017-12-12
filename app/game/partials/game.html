@@ -1,5 +1,5 @@
 
-<nav ng-include="'/app/navigation/partials/navigation.html'"></nav>
+<nav class="nav-wrapper amber darken-3" ng-include="'/app/navigation/partials/navigation.html'"></nav>
 
 <div>
     <div>
@@ -11,22 +11,24 @@
 
             <div class="game_rows_holder">
                 <div class="row_1">
-                    <button id="1" ng-click="buttonClick(1)">1</button>
-                    <button id="2" ng-click="buttonClick(2)">2</button>
-                    <button id="3" ng-click="buttonClick(3)">3</button>
+                    <button id="1" ng-click="buttonClick(1)"><div class="gruden"></div></button>
+                    <button id="2" ng-click="buttonClick(2)"><div class="gundy"></div></button>
+                    <button id="3" ng-click="buttonClick(3)"><div class="leach"></div></button>
                 </div>
 
                 <div class="row_2">
-                    <button id="4" ng-click="buttonClick(4)">4</button>
-                    <button id="5" ng-click="buttonClick(5)">5</button>
-                    <button id="6" ng-click="buttonClick(6)">6</button>
+                    <button id="4" ng-click="buttonClick(4)"><div class="martin"></div></button>
+                    <button id="5" ng-click="buttonClick(5)"><div class="miles"></div></button>
+                    <button id="6" ng-click="buttonClick(6)"><div class="schiano"></div></button>
                 </div>
             </div>
 
-            <span ng-if="!gameStarted()">
-                <button ng-click="startGame()">Start Search</button>
-            </span>
-            <span ng-if="gameStarted()"></span>
+            <div>
+                <span ng-if="!gameStarted()">
+                    <button ng-click="startGame()">Start Search</button>
+                </span>
+                <span ng-if="gameStarted()"></span>
+            </div>
         </div>
     </div>
 </div>
