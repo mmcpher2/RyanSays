@@ -8,4 +8,3 @@ obj
 *.db
 *.sqlite3
 .vscode
-app/app.config.js
