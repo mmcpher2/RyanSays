@@ -30,7 +30,6 @@ angular
                     data: chatObj
                 })
             }
-        },
-
+        }
     })
 })

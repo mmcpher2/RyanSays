@@ -10,8 +10,8 @@
         <div id="eachChat"></div>
     </div>
 
-    <div id="formSubmitHolder">
-        <input type="text" placeholder="Enter Chat Here" autofocus>
-        <button>Submit Chat</button>
-    </div>
+    <form ng-controller="ChatboardCtrl">
+        <input type="text" placeholder="Enter Chat Here" ng-model="newChat" autofocus>
+        <button ng-click="addChat(newChat)">Submit Chat</button>
+    </form>
 </div>
