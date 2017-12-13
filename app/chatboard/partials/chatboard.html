@@ -1,16 +1,18 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
-<h3>Chatboard</h3>
-<p>Tell the other Athletic Directors what you think of their search at the University of Tennessee by chatting below!</p>
+<div class="container">
+    <h3>Search Discussion Board</h3>
+    <p>Tell the other Athletic Directors what you think of their search at the University of Tennessee by chatting below!</p>
 
-<div>
-    <div ng-repeat="comment in userChats | filter: query">
-        <li>{{comment.firstName}} {{comment.lastName}} ({{comment.datePosted}}): {{comment.comment}}</li>
+    <div>
+        <div ng-repeat="comment in userChats | filter: query">
+            <li>{{comment.firstName}} {{comment.lastName}} ({{comment.datePosted}}): {{comment.comment}}</li>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Enter Chat Here" ng-model="newChat" autofocus>
+            <button ng-click="addChat(newChat)">Submit Chat</button>
+        </form>
     </div>
-
-    <form>
-        <input type="text" placeholder="Enter Chat Here" ng-model="newChat" autofocus>
-        <button ng-click="addChat(newChat)">Submit Chat</button>
-    </form>
 </div>

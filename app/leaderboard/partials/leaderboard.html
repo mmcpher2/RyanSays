@@ -2,19 +2,21 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
-<div id="leaderBoard">
-    <h3>Leaderboard</h3>
-        <table class="bordered">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Longest Tenure</th>
-            </tr>
-            <tr ng-repeat="user in users | orderBy:'-highScore'">
-                <td>{{ user.firstName }}</td>
-                <td>{{ user.lastName }}</td>
-                <td>{{ user.highScore }}</td>
-            </tr>
-        </table>
-    <div id="shareBtn" class="btn btn-success clearfix">Share your longest tenure FaceBook</div>
+<div class="container">
+    <div id="leaderBoard">
+        <h3>Leaderboard</h3>
+            <table class="bordered">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Longest Tenure</th>
+                </tr>
+                <tr ng-repeat="user in users | orderBy:'-highScore'">
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.highScore }} weeks</td>
+                </tr>
+            </table>
+        <div id="shareBtn" class="btn btn-success clearfix">Share your longest tenure FaceBook</div>
+    </div>
 </div>

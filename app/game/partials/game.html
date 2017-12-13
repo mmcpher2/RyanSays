@@ -2,37 +2,52 @@
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
 <div>
-    <div>
-        <div class="game_holder">
-            <p>Press "Start Search" to begin the UT coaching search!</p>
-
+    <div class="container">
+        <div class="game_frame">
             <p> Your Current Longest Tenure: {{ highScore }} weeks.</p>
             <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
 
-            <div class="game_rows_holder">
-                <div class="row_1">
-                    <button id="1" ng-click="buttonClick(1)"><div class="gruden"></div></button>
-                    <button id="2" ng-click="buttonClick(2)"><div class="gundy"></div></button>
-                    <button id="3" ng-click="buttonClick(3)"><div class="leach"></div></button>
+            <div class="game_toggle_box">
+                <div>
+                    <span ng-if="!gameStarted()">
+                        <div>Coaching Search Rules:
+                            <ul>
+                                <li>1. Once you "Start the Coaching Search", you will be prompted with a flashing orange background of the first coach in the search.</li>
+                                <li>2. Respond by clicking the coach that just flashed.</li>
+                                <li>3. Once you move to the next round, a new coach will be added to the search and will flash after the first coach flashes again</li>
+                                <li>4. Respond again by clicking the first coach and then the second.</li>
+                                <li>5. Continue the search as long as you can remember the order as it grows.</li>
+                                <li>6. You will be fired as soon as you forget, so be careful!</li>
+                            </ul>
+                        </div>
+                        <button ng-click="startGame()">Start Coaching Search</button>
+                    </span>
+                    <span ng-if="gameStarted()"></span>
                 </div>
 
-                <div class="row_2">
-                    <button id="4" ng-click="buttonClick(4)"><div class="martin"></div></button>
-                    <button id="5" ng-click="buttonClick(5)"><div class="miles"></div></button>
-                    <button id="6" ng-click="buttonClick(6)"><div class="schiano"></div></button>
+                <div>
+                    <span ng-if="!gameStarted()"></span>
+                    <span ng-if="gameStarted()" class="game_rows_holder">
+                        <div class="row_1">
+                            <button id="1" ng-click="buttonClick(1)"><div class="gruden"></div></button>
+                            <button id="2" ng-click="buttonClick(2)"><div class="gundy"></div></button>
+                            <button id="3" ng-click="buttonClick(3)"><div class="leach"></div></button>
+                        </div>
+
+                        <div class="row_2">
+                            <button id="4" ng-click="buttonClick(4)"><div class="martin"></div></button>
+                            <button id="5" ng-click="buttonClick(5)"><div class="miles"></div></button>
+                            <button id="6" ng-click="buttonClick(6)"><div class="schiano"></div></button>
+                        </div>
+                    </span>
                 </div>
             </div>
-
-            <div>
-                <span ng-if="!gameStarted()">
-                    <button ng-click="startGame()">Start Search</button>
-                </span>
-                <span ng-if="gameStarted()"></span>
-            </div>
-
-            <div id="shareBtn" class="btn btn-success clearfix">Share your longest tenure FaceBook</div>
-
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20just%20lasted%20{{highScore}}%20weeks%20as%20the%20Athletic%20Director%20at%20the%20University%20of%20Tennessee!%20Play%20the%20Tennessee%20Athletic%20Director%20simulator%20and%20see%20how%20long%20you%20can%20last%20by%20clicking%20the%20link%20below...%20It's%20incredible.%20https://mmcpher2.github.io/RyanSays/">Tweet your tenure</a>
         </div>
+
+            <span>
+                <div id="shareBtn" class="btn btn-success clearfix">Share your longest tenure FaceBook</div>
+
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20just%20lasted%20{{highScore}}%20weeks%20as%20the%20Athletic%20Director%20at%20the%20University%20of%20Tennessee!%20Play%20the%20Tennessee%20Athletic%20Director%20simulator%20and%20see%20how%20long%20you%20can%20last%20by%20clicking%20the%20link%20below...%20It's%20incredible.%20https://mmcpher2.github.io/RyanSays/">Tweet your tenure</a>
+            </span>
     </div>
 </div>

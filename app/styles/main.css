@@ -1,3 +1,4 @@
+
 /* Auth.html */
 .gameInfo {
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -9,6 +10,15 @@
 /* Adding coloring to current coach in search */
 .addBackground {
     background-color: hsla(27, 100%, 50%, 0.84);
+}
+
+/* Game frame and toggle box */
+.game_frame {
+    border: 1px solid #58595B;
+}
+
+.game_toggle_box {
+    border: 1px solid #58595B;
 }
 
 /* Button Images and filter */
