@@ -13,6 +13,7 @@ angular
                     url: "https://ryansays-293c9.firebaseio.com/chats/.json"
                 }).then(response => {
                     const data = response.data
+                    console.log(data)
                     // Make an array of objects so we can use filters
                    this.cache = Object.keys(data).map(key => {
                         data[key].id = key

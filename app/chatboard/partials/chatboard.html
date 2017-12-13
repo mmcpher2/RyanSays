@@ -1,13 +1,13 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'/app/navigation/partials/navigation.html'"></nav>
 
-<h2>Chatboard - Coming Soon</h2>
+<h2>Chatboard</h2>
 <p>Get ready to tell the other Athletic Directors what you think of their time at the University of Tennessee!</p>
 
 
 <div>
-    <div id="chatBoxHolder">
-        <div id="eachChat"></div>
+    <div ng-repeat="comment in userChats | filter: query">
+        <li>Athletic Director: {{comment.firstName}} {{comment.lastName}}: {{comment.comment}}</li>
     </div>
 
     <form ng-controller="ChatboardCtrl">
