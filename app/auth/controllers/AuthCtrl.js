@@ -25,7 +25,8 @@ angular.module("RyanSays")
             "userId": didRegister.uid,
             "firstName": registerNewUser.firstName,
             "lastName": registerNewUser.lastName,
-            "highScore": 0
+            "highScore": 0,
+            "payout": 0
         }
         // Adding new user object to FB through UserFactory add "POST" function
         UserFactory.add(userObj)

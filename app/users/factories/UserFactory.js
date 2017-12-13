@@ -52,9 +52,10 @@ angular
             }
         },
         "changeHighScore": {
-            value: function (user, roundCounter, userKey) {
+            value: function (user, roundCounter, userKey, payout) {
                 if (roundCounter > user.highScore) {
                     user.highScore = roundCounter
+                    user.payout = payout
                     return $http({
                         method: "PUT",
                         url: `https://ryansays-293c9.firebaseio.com/users/${userKey}.json`,

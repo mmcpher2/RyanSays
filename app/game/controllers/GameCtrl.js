@@ -26,6 +26,7 @@ angular.module("RyanSays")
             $scope.userObj = user[key]
             // Using this to pupulate the highscore in the DOM
             $scope.highScore = $scope.userObj.highScore
+            $scope.payout = ($scope.highScore * 112657.24)
         }
     })
     // Starting roundcounter at 0, but will start at 1 once it increments in startRound()
@@ -97,10 +98,16 @@ angular.module("RyanSays")
                 console.log(numbersArray[loopCounter])
             }
             else {
+
+                basicPayout = $scope.roundCounter * 112657.24
+                roundedPayout = +basicPayout.toFixed(2)
+                $scope.payout = (roundedPayout.toLocaleString())
+                console.log($scope.payout)
+
                 // Upon failing, compare current round against users highScore and put the current score in if it is larger than highScore.
-                UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey)
+                UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey, $scope.payout)
                 console.log("failed!!")
-                alert("YOU'RE FIRED, GO FIND ANOTHER JOB!")
+                alert("YOU'RE FIRED, GO FIND ANOTHER JOB!  But, make sure to check your payout on the Leaderboard before you leave though!")
 
                 // Show start button now
                 $scope.gameStarted = function () {

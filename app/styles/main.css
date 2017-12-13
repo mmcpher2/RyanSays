@@ -1,11 +1,5 @@
 
 /* Auth.html */
-.gameInfo {
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    width: 500px;
-    height: 250px;
-    margin-bottom: 10px;
-}
 
 /* Adding coloring to current coach in search */
 .addBackground {
@@ -69,4 +63,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+}
+
+/* chatboard */
+
+#listOfChats {
+    list-style-type: none;
+}
+#nameOfUser {
+    text-decoration: underline;
 }
