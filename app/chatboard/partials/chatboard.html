@@ -7,10 +7,10 @@
 
 <div>
     <div ng-repeat="comment in userChats | filter: query">
-        <li>Athletic Director: {{comment.firstName}} {{comment.lastName}}: {{comment.comment}}</li>
+        <li>{{comment.firstName}} {{comment.lastName}} ({{comment.datePosted}}): {{comment.comment}}</li>
     </div>
 
-    <form ng-controller="ChatboardCtrl">
+    <form>
         <input type="text" placeholder="Enter Chat Here" ng-model="newChat" autofocus>
         <button ng-click="addChat(newChat)">Submit Chat</button>
     </form>
