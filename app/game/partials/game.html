@@ -2,13 +2,13 @@
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
 <div class="container">
-    <div class="game_frame container">
+    <div class="game_frame">
         <div class="container">
             <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
             <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
         </div>
 
-        <div class="game_toggle_box container">
+        <div class="game_toggle_box">
             <span ng-if="!gameStarted()">
                 <div class="container">Coaching Search Rules:
                     <ul>

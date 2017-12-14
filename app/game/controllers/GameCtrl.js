@@ -75,14 +75,14 @@ angular.module("RyanSays")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).className = "addBackground"
                 doAnotherSetTimeout(selectedElement, num1)
-            }, 500)
+            }, 1000)
             // Setting the delay for removing the addBackground class to the buttons
             function doAnotherSetTimeout(selectedElement, num2) {
                 setTimeout(() => {
                     document.getElementById(`${selectedElement}`).classList.remove("addBackground")
                     // Wait to flash next coach until this one is finished
                     completionFn()
-                }, 500)
+                }, 1000)
             }
         }
 

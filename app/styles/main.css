@@ -1,18 +1,25 @@
 
 /* Auth.html */
 
+.instructions {
+    margin-top: 20px;
+}
+
 /* Adding coloring to current coach in search */
 .addBackground {
     background-color: hsla(27, 100%, 50%, 0.84);
 }
 
 /* Game frame and toggle box */
-.game_frame {
-    border: 1px solid #58595B;
-}
 
 .game_toggle_box {
-    border: 1px solid #58595B;
+    border: 1px solid rgba(88, 89, 91, 0.3);
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row_1 {
+    justify-content: center;
 }
 
 /* Button Images and filter */
@@ -79,4 +86,5 @@
 #scrollArea {
     max-height: 300px;
     overflow: scroll;
+    border: 1px solid rgba(88, 89, 91, 0.3);
 }

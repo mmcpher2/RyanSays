@@ -3,16 +3,16 @@
 
 <div class="container">
     <div>
-        <div>
-                <h6>Welcome to the University of Tennesse coaching search!</h6>
+        <div class="instructions">
+            <h6>Welcome to the University of Tennesse coaching search!</h6>
 
-                <p>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searches of all time!</p>
+            <p>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searches of all time!</p>
 
-                <p>But be careful! If you don't follow along with who the fans are picking as the coach, you will be fired immediately!!!</p>
+            <p>But be careful! If you don't follow along with who the fans are picking as the coach, you will be fired immediately!!!</p>
 
-                <p>Enter your name, email, and password to register or login.</p>
+            <p>Enter your name, email, and password to register or login.</p>
 
-                <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p>
+            <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p>
         </div>
 
         <div>
@@ -20,8 +20,8 @@
             <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus>
             <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
             <input type="password" placeholder="Password" ng-model="auth.password" autofocus>
-            <button class="btn waves-effect waves-teal" ng-click="registerUser(auth)">Register</button>
-            <button class="btn waves-effect waves-teal" ng-click="logMeIn(auth)">Login</button>
+            <button ng-click="registerUser(auth)">Register</button>
+            <button ng-click="logMeIn(auth)">Login</button>
         </div>
     </div>
 </div>
