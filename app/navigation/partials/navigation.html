@@ -1,7 +1,12 @@
 
 
 <div ng-controller="NavCtrl">
-        <a href="#" class="left brand-logo">UT Coaching Search</a>
+
+            <span ng-if="isAuthenticated()">
+                <a href="#!/game" class="left brand-logo">UT Coaching Search</a>
+            </span>
+            <span ng-if="!isAuthenticated() " class="left brand-logo">UT Coaching Search</span>
+
             <ul id="nav-mobile" class="right hide-on-sml-and-down">
                 <li>
                     <div ng-hide="currentPath === '/leaderboard'">
