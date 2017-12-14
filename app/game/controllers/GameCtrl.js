@@ -10,7 +10,7 @@ angular.module("RyanSays")
         quote: `I just lasted ${$scope.highScore} weeks as the Athletic Director at the University of Tennessee!
 
         Play the Tennessee Athletic Director simulator and see how long you can last by clicking the link below... It's incredible.`,
-        href: 'https://mmcpher2.github.io/RyanSays/',
+        href: 'https://mmcpher2.github.io/UTCoachingSearchGame/',
         }, function(response){});
     }
 
