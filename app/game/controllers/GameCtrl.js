@@ -45,7 +45,7 @@ angular.module("RyanSays")
         // Counts number of times through each gameLoop() loop
         loopCounter = 0
         // For lighting up buttons - Multiply timeout delays by 10
-        let num = 10
+        // let num = 10
         // Responsible for handing each new round, and starting gameLoop()
         let startRound = function () {
             // Adding 1 to show with round you are on
@@ -56,25 +56,33 @@ angular.module("RyanSays")
             console.log(numbersArray[loopCounter])
             console.log(numbersArray)
 
-            for (let i = 0; i < numbersArray.length; i++) {
-                console.log(i)
+           run(numbersArray, 0)
+        }
+
+        // This is waiting for each coach flash to finish until adding a new number to the array
+        function run(numbersArray, i) {
+            if (i < numbersArray.length) {
                 let selectedElement = numbersArray[i]
                 console.log("selectedElement", selectedElement)
-                doSetTimeout(selectedElement, num)
-                num += 1
+                doSetTimeout(selectedElement, i, function() {
+                    run(numbersArray, i + 1)
+                })
             }
         }
         // Setting the delay for adding the addBackground class to the buttons in the nubersArray
-        function doSetTimeout(selectedElement, num1) {
+        function doSetTimeout(selectedElement, num1, completionFn) {
+            console.log("function doSetTimeout(selectedElement, num1, completionFn) {")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).className = "addBackground"
                 doAnotherSetTimeout(selectedElement, num1)
-            }, 250 * num1)
+            }, 500)
             // Setting the delay for removing the addBackground class to the buttons
             function doAnotherSetTimeout(selectedElement, num2) {
                 setTimeout(() => {
                     document.getElementById(`${selectedElement}`).classList.remove("addBackground")
-                }, 15 * num2)
+                    // Wait to flash next coach until this one is finished
+                    completionFn()
+                }, 500)
             }
         }
 
