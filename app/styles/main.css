@@ -10,20 +10,19 @@
 /* Game frame and toggle box */
 
 .game_toggle_box {
-    /* border: 1px solid rgba(88, 89, 91, 0.3); */
-    padding-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Adding coloring to current coach in search */
 .gameCounters {
     text-align: center;
+    margin-bottom: -14px;
 }
 
 .darkFilter {
     width: 200px;
     height: 200px;
-    background-color: rgba(88, 89, 91, 0.8);
+    background-color: rgba(253, 253, 253, 0.75);
 }
 
 .gruden {
@@ -96,4 +95,22 @@
     max-height: 300px;
     overflow: scroll;
     border: 1px solid rgba(88, 89, 91, 0.3);
+}
+
+/* Footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Share Buttons */
+
+.shareButtons {
+    margin-bottom: 20px;
 }

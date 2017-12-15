@@ -5,63 +5,76 @@
     <div class="game_frame">
         <div class="row">
             <div class="col s6 gameCounters">
-                <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
+                <div class="card">
+                    <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
+                </div>
             </div>
             <div class="col s6 gameCounters">
-                <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
+                <div class="card">
+                    <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
+                </div>
             </div>
         </div>
 
         <div class="game_toggle_box">
             <span ng-if="!gameStarted()">
-                <div class="container">Coaching Search Rules:
-                    <ul>
-                        <li>1. Once you "Start the Coaching Search", you will be prompted with a flashing orange background of the first coach in the search.</li>
-                        <li>2. Respond by clicking the coach that just flashed.</li>
-                        <li>3. Once you move to the next round, a new coach will be added to the search and will flash after the first coach flashes again</li>
-                        <li>4. Respond again by clicking the first coach and then the second.</li>
-                        <li>5. Continue the search as long as you can remember the order as it grows.</li>
-                        <li>6. You will be fired as soon as you forget, so be careful!</li>
-                    </ul>
-                    <div class="row">
-                        <button class="btn waves-effect waves-orange" ng-click="startGame()">Start Coaching Search!</button>
+
+                    <div class="card-panel grey darken-2">
+                        <div class="white-text">
+                            <h5>Coaching Search Rules:</h5>
+                            <ul>
+                                <li>1. After clicking "Start Coaching Search", the first coach in the search will be revealed.</li>
+                                <li>2. Respond by clicking the coach that just flashed.</li>
+                                <li>3. Once you move to the next round, a new coach will be added to the search and will be revealed fter the first coach flashes again</li>
+                                <li>4. Respond again by clicking the first coach and then the second.</li>
+                                <li>5. Continue the search as long as you can remember the order as it grows.</li>
+                                <li>6. You will be fired as soon as you forget, so be careful!</li>
+                            </ul>
+                            <div class="row">
+                                <button class="btn amber darken-3 waves-effect waves-orange" ng-click="startGame()">Start Coaching Search!</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
             </span>
             <span ng-if="gameStarted()"></span>
 
             <span ng-if="!gameStarted()"></span>
             <span ng-if="gameStarted()" class="game_rows_holder">
-                <div class="row">
-                    <div class="col s4">
-                        <div class="gruden waves-effect waves-orange"><div id="1" class="darkFilter" ng-click="buttonClick(1)"></div></div>
+                <div class="card-panel grey darken-2">
+                    <div class="row">
+                        <div class="col s4">
+                            <div class="gruden waves-effect waves-orange"><div id="1" class="darkFilter" ng-click="buttonClick(1)"></div></div>
+                        </div>
+                        <div class="col s4">
+                            <div class="gundy waves-effect waves-orange"><div id="2" class="darkFilter" ng-click="buttonClick(2)"></div></div>
+                        </div>
+                        <div class="col s4">
+                            <div class="leach waves-effect waves-orange"><div id="3" class="darkFilter" ng-click="buttonClick(3)"></div></div>
+                        </div>
                     </div>
-                    <div class="col s4">
-                        <div class="gundy waves-effect waves-orange"><div id="2" class="darkFilter" ng-click="buttonClick(2)"></div></div>
-                    </div>
-                    <div class="col s4">
-                        <div class="leach waves-effect waves-orange"><div id="3" class="darkFilter" ng-click="buttonClick(3)"></div></div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col s4">
-                        <div class="martin waves-effect waves-orange"><div id="4" class="darkFilter" ng-click="buttonClick(4)"></div></div>
-                    </div>
-                    <div class="col s4">
-                        <div class="miles waves-effect waves-orange"><div id="5" class="darkFilter" ng-click="buttonClick(5)"></div></div>
-                    </div>
-                    <div class="col s4">
-                        <div class="schiano waves-effect waves-orange"><div id="6" class="darkFilter" ng-click="buttonClick(6)"></div></div>
+                    <div class="row">
+                        <div class="col s4">
+                            <div class="martin waves-effect waves-orange"><div id="4" class="darkFilter" ng-click="buttonClick(4)"></div></div>
+                        </div>
+                        <div class="col s4">
+                            <div class="miles waves-effect waves-orange"><div id="5" class="darkFilter" ng-click="buttonClick(5)"></div></div>
+                        </div>
+                        <div class="col s4">
+                            <div class="schiano waves-effect waves-orange"><div id="6" class="darkFilter" ng-click="buttonClick(6)"></div></div>
+                        </div>
                     </div>
                 </div>
             </span>
         </div>
     </div>
 
-        <div class="container">
+        <div class="shareButtons center">
             <div id="shareBtn" class="btn btn-success clearfix">Share your longest tenure on FaceBook</div>
 
             <a class="btn waves-effect waves-orange twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20just%20lasted%20{{highScore}}%20weeks%20as%20the%20Athletic%20Director%20at%20the%20University%20of%20Tennessee!%20Play%20the%20Tennessee%20Athletic%20Director%20simulator%20and%20see%20how%20long%20you%20can%20last%20by%20clicking%20the%20link%20below...%20It's%20incredible.%20https://mmcpher2.github.io/UTCoachingSearchGame/">Tweet your tenure</a>
         </div>
 </div>
+
+<footer class="page-footer amber darken-3" ng-include="'./app/footer/partials/footer.html'"></nav>
