@@ -112,5 +112,6 @@ main {
 /* Share Buttons */
 
 .shareButtons {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
