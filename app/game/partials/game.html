@@ -3,9 +3,13 @@
 
 <div class="container">
     <div class="game_frame">
-        <div class="container">
-            <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
-            <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
+        <div class="row">
+            <div class="col s6 gameCounters">
+                <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
+            </div>
+            <div class="col s6 gameCounters">
+                <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
+            </div>
         </div>
 
         <div class="game_toggle_box">
@@ -28,16 +32,28 @@
 
             <span ng-if="!gameStarted()"></span>
             <span ng-if="gameStarted()" class="game_rows_holder">
-                <div class="row_1">
-                    <button id="1" ng-click="buttonClick(1)"><div class="gruden"></div></button>
-                    <button id="2" ng-click="buttonClick(2)"><div class="gundy"></div></button>
-                    <button id="3" ng-click="buttonClick(3)"><div class="leach"></div></button>
+                <div class="row">
+                    <div class="col s4">
+                        <div class="gruden waves-effect waves-orange"><div id="1" class="darkFilter" ng-click="buttonClick(1)"></div></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="gundy waves-effect waves-orange"><div id="2" class="darkFilter" ng-click="buttonClick(2)"></div></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="leach waves-effect waves-orange"><div id="3" class="darkFilter" ng-click="buttonClick(3)"></div></div>
+                    </div>
                 </div>
 
-                <div class="row_2">
-                    <button id="4" ng-click="buttonClick(4)"><div class="martin"></div></button>
-                    <button id="5" ng-click="buttonClick(5)"><div class="miles"></div></button>
-                    <button id="6" ng-click="buttonClick(6)"><div class="schiano"></div></button>
+                <div class="row">
+                    <div class="col s4">
+                        <div class="martin waves-effect waves-orange"><div id="4" class="darkFilter" ng-click="buttonClick(4)"></div></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="miles waves-effect waves-orange"><div id="5" class="darkFilter" ng-click="buttonClick(5)"></div></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="schiano waves-effect waves-orange"><div id="6" class="darkFilter" ng-click="buttonClick(6)"></div></div>
+                    </div>
                 </div>
             </span>
         </div>

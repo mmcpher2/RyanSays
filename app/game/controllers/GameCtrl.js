@@ -69,20 +69,20 @@ angular.module("RyanSays")
                 })
             }
         }
-        // Setting the delay for adding the addBackground class to the buttons in the nubersArray
+        // Setting the delay for adding the darkFilter class to the buttons in the nubersArray
         function doSetTimeout(selectedElement, num1, completionFn) {
             console.log("function doSetTimeout(selectedElement, num1, completionFn) {")
             setTimeout(() => {
-                document.getElementById(`${selectedElement}`).className = "addBackground"
+                document.getElementById(`${selectedElement}`).classList.remove("darkFilter")
                 doAnotherSetTimeout(selectedElement, num1)
-            }, 1000)
-            // Setting the delay for removing the addBackground class to the buttons
+            }, 700)
+            // Setting the delay for removing the darkFilter class to the buttons
             function doAnotherSetTimeout(selectedElement, num2) {
                 setTimeout(() => {
-                    document.getElementById(`${selectedElement}`).classList.remove("addBackground")
+                    document.getElementById(`${selectedElement}`).className = "darkFilter"
                     // Wait to flash next coach until this one is finished
                     completionFn()
-                }, 1000)
+                }, 700)
             }
         }
 

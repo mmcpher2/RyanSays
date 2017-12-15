@@ -1,75 +1,84 @@
 
+/* Font Types */
+
 /* Auth.html */
 
 .instructions {
     margin-top: 20px;
 }
 
-/* Adding coloring to current coach in search */
-.addBackground {
-    background-color: hsla(27, 100%, 50%, 0.84);
-}
-
 /* Game frame and toggle box */
 
 .game_toggle_box {
-    border: 1px solid rgba(88, 89, 91, 0.3);
+    /* border: 1px solid rgba(88, 89, 91, 0.3); */
     padding-top: 20px;
     margin-bottom: 20px;
 }
 
-.row_1 {
-    justify-content: center;
+/* Adding coloring to current coach in search */
+.gameCounters {
+    text-align: center;
 }
 
-/* Button Images and filter */
+.darkFilter {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(88, 89, 91, 0.8);
+}
+
 .gruden {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Gruden.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .gundy {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Gundy.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .leach {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Leach.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .martin {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Martin.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .miles {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Miles.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .schiano {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-image: url('../coaches/Schiano.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 /* chatboard */
