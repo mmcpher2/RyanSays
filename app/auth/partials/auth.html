@@ -1,10 +1,24 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
-<div class="container">
-    <div>
-        <div class="instructions">
-            <h6>Welcome to the University of Tennesse coaching search!</h6>
+<div class="container logInPage">
+
+
+
+    <div class="row">
+        <div class="col s8">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                    <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiGxuGY_IzYAhUEheAKHSG-DhMQjRwIBw&url=http%3A%2F%2Fwww.gazettenet.com%2FTennesse-names-Phillip-Fulmer-AD-14089388&psig=AOvVaw3r0UF5N22HK1vatErvL0xc&ust=1513458828228982">
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- <h6>Welcome to the University of Tennesse coaching search!</h6>
 
             <p>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searches of all time!</p>
 
@@ -12,16 +26,16 @@
 
             <p>Enter your name, email, and password to register or login.</p>
 
-            <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p>
+            <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p> -->
         </div>
 
-        <div>
+        <div class="col s4">
             <input type="text" placeholder="First Name" ng-model="auth.firstName"  autofocus>
             <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus>
             <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
             <input type="password" placeholder="Password" ng-model="auth.password" autofocus>
-            <button ng-click="registerUser(auth)">Register</button>
-            <button ng-click="logMeIn(auth)">Login</button>
+            <button class="btn" ng-click="registerUser(auth)">Register</button>
+            <button class="btn" ng-click="logMeIn(auth)">Login</button>
         </div>
     </div>
 </div>

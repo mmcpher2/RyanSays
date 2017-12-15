@@ -3,7 +3,7 @@
 
 /* Auth.html */
 
-.instructions {
+.logInPage {
     margin-top: 20px;
 }
 
@@ -95,6 +95,10 @@
     max-height: 300px;
     overflow: scroll;
     border: 1px solid rgba(88, 89, 91, 0.3);
+}
+
+.submitChatButton {
+    margin-bottom: 20px;
 }
 
 /* Footer */
