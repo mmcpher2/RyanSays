@@ -3,8 +3,44 @@
 
 /* Auth.html */
 
-.logInPage {
+/* .logInPage {
     margin-top: 20px;
+} */
+
+.Currie {
+    width: 100%;
+    height: 100%;
+    background-image: url('../coaches/Currie.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+.Fulmer {
+    width: 100%;
+    height: 100%;
+    background-image: url('../coaches/Fulmer.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+.Hamilton {
+    width: 100%;
+    height: 100%;
+    background-image: url('../coaches/Hamilton.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+.Hart {
+    width: 100%;
+    height: 100%;
+    background-image: url('../coaches/Hart.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
 }
 
 /* Game frame and toggle box */

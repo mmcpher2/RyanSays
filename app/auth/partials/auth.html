@@ -1,43 +1,79 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
-<div class="container logInPage">
-
-
-
-    <div class="row">
-        <div class="col s8">
-            <div class="slider">
-                <ul class="slides">
-                    <li>
-                    <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiGxuGY_IzYAhUEheAKHSG-DhMQjRwIBw&url=http%3A%2F%2Fwww.gazettenet.com%2FTennesse-names-Phillip-Fulmer-AD-14089388&psig=AOvVaw3r0UF5N22HK1vatErvL0xc&ust=1513458828228982">
-                    <div class="caption center-align">
-                        <h3>This is our big Tagline!</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div>
-                    </li>
-                </ul>
+<div class="logInPage">
+      <div class="slider">
+    <ul class="slides">
+      <li>
+        <div class="Currie">
+            <div class="caption left-align">
+                <h3>The UT Coaching Search Game</h3>
+                <h5>Now <b><u>YOU</u></b> can be the Athletic Director!</h5>
             </div>
-            <!-- <h6>Welcome to the University of Tennesse coaching search!</h6>
-
-            <p>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searches of all time!</p>
-
-            <p>But be careful! If you don't follow along with who the fans are picking as the coach, you will be fired immediately!!!</p>
-
-            <p>Enter your name, email, and password to register or login.</p>
-
-            <p>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</p> -->
+        </div>
+      </li>
+      <li>
+        <div class="Fulmer">
+            <div class="caption right-align">
+                <h3>You would have done a much better job, right?</h3>
+            </div>
+        </div>
+      </li>
+      <li>
+        <div class="Hamilton">
+            <div class="caption left-align">
+                <h3>Now it's your turn to be the Athletic Director...</h3>
+            </div>
+        </div>
+      </li>
+      <li>
+        <div class="Hart">
+            <div class="caption center-align">
+                <h3>Register or log in below!</h3>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+    <div class="row">
+        <div class="col s4">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text left-align">
+                        <span class="card-title">How to Play</span>
+            <li>Feel what it's like to be the Athletic Director at the University of Tennessee during one of the most exciting coaching searches of all time!</li>
+            <li>But be careful! If you don't follow along with who the fans are picking as the coach, you will be fired immediately!</li>
+            <li>After logging in, you will begin your first week as the new Athletic Director of the University of Tennessee.</li>
+                </div>
+            </div>
         </div>
 
         <div class="col s4">
-            <input type="text" placeholder="First Name" ng-model="auth.firstName"  autofocus>
-            <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus>
-            <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
-            <input type="password" placeholder="Password" ng-model="auth.password" autofocus>
-            <button class="btn" ng-click="registerUser(auth)">Register</button>
-            <button class="btn" ng-click="logMeIn(auth)">Login</button>
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text left-align">
+                    <span class="card-title">For New AD's</span>
+                        <input type="text" placeholder="First Name" ng-model="registerauth.firstName"  autofocus>
+                        <input type="text" placeholder="Last Name" ng-model="registerauth.lastName"  autofocus>
+                        <input type="email" placeholder="Email address" ng-model="registerauth.email"  autofocus>
+                        <input type="password" placeholder="Password" ng-model="registerauth.password" autofocus>
+                        <button class="btn" ng-click="registerUser(registerauth)">Register</button>
+                        <!-- <button class="btn" ng-click="logMeIn(auth)">Login</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col s4">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text left-align">
+                    <span class="card-title">For Returning AD's</span>
+                        <!-- <input type="text" placeholder="First Name" ng-model="auth.firstName"  autofocus>
+                        <input type="text" placeholder="Last Name" ng-model="auth.lastName"  autofocus> -->
+                        <input type="email" placeholder="Email address" ng-model="loginauth.email"  autofocus>
+                        <input type="password" placeholder="Password" ng-model="loginauth.password" autofocus>
+                        <!-- <button class="btn" ng-click="registerUser(auth)">Register</button> -->
+                        <button class="btn" ng-click="logMeIn(loginauth)">Login</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
 <footer class="page-footer amber darken-3" ng-include="'./app/footer/partials/footer.html'"></nav>

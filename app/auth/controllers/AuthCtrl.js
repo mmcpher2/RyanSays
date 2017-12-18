@@ -1,6 +1,19 @@
 angular.module("RyanSays")
 .controller("AuthCtrl", function($scope, $location, AuthFactory, UserFactory) {
-    $scope.auth = {}
+
+    $('.slider').slider();
+      // Pause slider
+      $('.slider').slider('pause');
+      // Start slider
+      $('.slider').slider('start');
+      // Next slide
+      $('.slider').slider('next');
+      // Previous slide
+      $('.slider').slider('prev');
+
+    $scope.loginauth = {}
+    $scope.registerauth = {}
+
 
     $scope.logoutUser = function(){
         AuthFactory.logout()
@@ -9,8 +22,8 @@ angular.module("RyanSays")
 
     $scope.logMeIn = function (credentials) {
         AuthFactory.authenticate(credentials).then(function (didLogin) {
-            $scope.login = {}
-            $scope.register = {}
+            // $scope.login = {}
+            // $scope.register = {}
             // Send user to game page (Log them in...)
             $location.url("/game")
         })

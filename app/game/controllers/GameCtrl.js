@@ -75,14 +75,14 @@ angular.module("RyanSays")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).classList.remove("darkFilter")
                 doAnotherSetTimeout(selectedElement, num1)
-            }, 700)
+            }, 500)
             // Setting the delay for removing the darkFilter class to the buttons
             function doAnotherSetTimeout(selectedElement, num2) {
                 setTimeout(() => {
                     document.getElementById(`${selectedElement}`).className = "darkFilter"
                     // Wait to flash next coach until this one is finished
                     completionFn()
-                }, 700)
+                }, 500)
             }
         }
 
