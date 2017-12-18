@@ -1,16 +1,18 @@
 
 <nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
 
+<div class="protesters">
+
 <div class="container">
     <div class="game_frame">
         <div class="row">
             <div class="col s6 gameCounters">
-                <div class="card">
+                <div class="card blue-grey white-text">
                     <p placeholder="0"> Your Current Longest Tenure: {{ highScore }} weeks.</p>
                 </div>
             </div>
             <div class="col s6 gameCounters">
-                <div class="card">
+                <div class="card blue-grey white-text">
                     <p placeholder="0"> Current Week as Athletic Director: {{roundCounter}}</p>
                 </div>
             </div>
@@ -75,6 +77,8 @@
 
             <a class="btn waves-effect waves-orange twitter-share-button cyan lighten-3" href="https://twitter.com/intent/tweet?text=I%20just%20lasted%20{{highScore}}%20weeks%20as%20the%20Athletic%20Director%20at%20the%20University%20of%20Tennessee!%20Play%20the%20Tennessee%20Athletic%20Director%20simulator%20and%20see%20how%20long%20you%20can%20last%20by%20clicking%20the%20link%20below...%20It's%20incredible.%20https://mmcpher2.github.io/UTCoachingSearchGame/">Tweet your tenure</a>
         </div>
+</div>
+
 </div>
 
 <footer class="page-footer amber darken-3" ng-include="'./app/footer/partials/footer.html'"></nav>
