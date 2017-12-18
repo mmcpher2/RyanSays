@@ -1,6 +1,11 @@
 angular.module("RyanSays")
 .controller("GameCtrl", function($scope, UserFactory, AuthFactory) {
 
+    function play() {
+        var audio = document.getElementById("audio1")
+        audio.play()
+    }
+
     // Share the users high score on their facbook page when they click the share button
     document.getElementById('shareBtn').onclick = function() {
         FB.ui({
@@ -74,6 +79,9 @@ angular.module("RyanSays")
             console.log("function doSetTimeout(selectedElement, num1, completionFn) {")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).classList.remove("darkFilter")
+                // Add mp3 file sound when div is selected in game
+                var audio = document.getElementById("audio1");
+                audio.play()
                 doAnotherSetTimeout(selectedElement, num1)
             }, 500)
             // Setting the delay for removing the darkFilter class to the buttons
@@ -89,6 +97,11 @@ angular.module("RyanSays")
         // Checking user button click against current array numbers
         $scope.buttonClick = function (buttonNumber) {
             parsedUserResponse = parseInt(buttonNumber)
+
+            // Add mp3 sound on button click
+                var audio = document.getElementById("audio1");
+                audio.play()
+
                 // Once you have hit the end of the array & you have gotten the last response correct, start a new round.
             if ((loopCounter + 1) === numbersArray.length && parsedUserResponse === numbersArray[loopCounter]) {
                 console.log("success!")

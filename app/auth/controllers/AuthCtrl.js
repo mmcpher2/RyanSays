@@ -1,7 +1,8 @@
 angular.module("RyanSays")
 .controller("AuthCtrl", function($scope, $location, AuthFactory, UserFactory) {
 
-    $('.slider').slider();
+      // Init slider
+      $('.slider').slider();
       // Pause slider
       $('.slider').slider('pause');
       // Start slider

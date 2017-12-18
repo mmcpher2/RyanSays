@@ -4,6 +4,10 @@
 /* Font Types */
 
 /* Auth Slider */
+.slider {
+    width: 900px;
+    margin: 0 auto;
+}
 
 .slider .indicators .indicator-item {
     background-color: #E77E06;
@@ -14,10 +18,6 @@
 }
 .slider .indicators .indicator-item.active {
     background-color: #ffffff;
-}
-.slider {
-    width: 900px;
-    margin: 0 auto;
 }
 .slider .indicators {
     bottom: 60px;
