@@ -80,8 +80,8 @@ angular.module("RyanSays")
             setTimeout(() => {
                 document.getElementById(`${selectedElement}`).classList.remove("darkFilter")
                 // Add mp3 file sound when div is selected in game
-                var audio = document.getElementById("audio1");
-                audio.play()
+                var audio1 = document.getElementById("audio1");
+                audio1.play()
                 doAnotherSetTimeout(selectedElement, num1)
             }, 500)
             // Setting the delay for removing the darkFilter class to the buttons
@@ -127,6 +127,8 @@ angular.module("RyanSays")
 
                 // Upon failing, compare current round against users highScore and put the current score in if it is larger than highScore.
                 UserFactory.changeHighScore($scope.userObj, $scope.roundCounter, $scope.userKey, $scope.payout)
+                var audio2 = document.getElementById("audio2");
+                audio2.play()
                 console.log("failed!!")
                 alert("YOU'RE FIRED, GO FIND ANOTHER JOB!  But, make sure to check your payout on the Leaderboard before you leave though!")
 
