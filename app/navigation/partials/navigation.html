@@ -2,15 +2,15 @@
 
 <div ng-controller="NavCtrl">
     <span ng-if="isAuthenticated()">
-        <a href="#!/game" class="left brand-logo">UT Coaching Search</a>
+        <a href="#!/game" class="left brand-logo"><i class="large material-icons">delete</i>UT Coaching Search</a>
     </span>
-    <span ng-if="!isAuthenticated() " class="left brand-logo">UT Coaching Search</span>
+    <span ng-if="!isAuthenticated() " class="left brand-logo"><i class="large material-icons">delete</i>UT Coaching Search</span>
 
     <ul id="nav-mobile" class="right hide-on-sml-and-down">
         <li>
             <div ng-hide="currentPath === '/leaderboard'">
                 <span ng-if="isAuthenticated()">
-                    <a href='#!/leaderboard'>LeaderBoard</a>
+                    <a href='#!/leaderboard'>Leaderboard</a>
                 </span>
                 <span ng-if="!isAuthenticated() "></span>
             </div>
@@ -19,7 +19,7 @@
         <li>
             <div ng-hide="currentPath === '/chatboard'">
                 <span ng-if="isAuthenticated()">
-                    <a href='#!/chatboard'>Discussion Board</a>
+                    <a href='#!/chatboard'>Trash Talk Board</a>
                 </span>
                 <span ng-if="!isAuthenticated() "></span>
             </div>
