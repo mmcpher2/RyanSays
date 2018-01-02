@@ -47,6 +47,10 @@ angular.module("RyanSays").config(function ($routeProvider) {
             controller: 'ChatboardCtrl',
             resolve: { isAuth }
         })
+        .when('/redditboard', {
+            templateUrl: 'app/redditboard/partials/reddit.html',
+            controller: 'RedditCtrl'
+        })
         .when('/auth', {
             templateUrl: 'app/auth/partials/auth.html',
             controller: 'AuthCtrl'

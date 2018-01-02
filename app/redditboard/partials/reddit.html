@@ -1,0 +1,27 @@
+<nav class="nav-wrapper amber darken-3" ng-include="'./app/navigation/partials/navigation.html'"></nav>
+
+<!-- <div class="trashtalk"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col s6 center-align">
+                <div class="card opacity">
+                </div>
+            </div>
+        </div>
+        <div class="card-panel opacity">
+            <h4>Reddit r/ockytop Feed!</h4>
+            <div id="redditsDisplaySection">
+                <div scroll-glue id="scrollArea">
+                    <div ng-repeat="redditPost in reddits | filter: query">
+                        <ul id="listOfReddits">
+                            <!-- <li id="titleOfPost">{{redditPost.firstName}}</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+
+
+<footer class="page-footer amber darken-3" ng-include="'./app/footer/partials/footer.html'"></nav>
