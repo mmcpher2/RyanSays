@@ -1,4 +1,6 @@
-#The UT Coaching Search Game!
+#UTCoachingSearchGame
+
+The UT Coaching Search Game!
 
 This is a web application that should currently only be used on web browsers.
 
